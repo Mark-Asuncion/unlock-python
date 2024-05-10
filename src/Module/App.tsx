@@ -1,11 +1,15 @@
-import React from 'react';
-import '../Styles/App.css';
+import { useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 
-function App() {
-  return (
-    <>
-    </>
-  );
+function Root() {
+    const navigate = useNavigate();
+    useEffect(() => {
+        navigate("/login");
+    });
+
+    return (
+        <p className='text-lg'>Root</p>
+    );
 }
 
-export default App;
+export default Root;
