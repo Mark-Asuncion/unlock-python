@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { GoogleLogin, useGoogleLogin } from '@react-oauth/google';
+import { useGoogleLogin } from '@react-oauth/google';
 import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
