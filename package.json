@@ -23,6 +23,7 @@
   "scripts": {
     "start": "react-dotenv && react-scripts start",
     "dev": "netlify dev",
+    "func": "netlify functions:serve",
     "build": "react-dotenv && react-scripts build",
     "test": "react-dotenv && react-scripts test",
     "eject": "react-scripts eject"

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
     const [token,setToken] = useState({});
+    const navigate = useNavigate();
 
     const login = useGoogleLogin({
         onSuccess: async tokenResponse => {
@@ -15,20 +16,42 @@ export default function Login() {
                 }
             });
             if (s.ok) {
-                const userInfo = s.json();
-                console.log(userInfo);
+                const userInfo = await s.json();
+                const spl = (userInfo.name as string).split(' ');
+                const lname = spl[spl.length-1];
+                let fname = "";
+                spl.forEach((v, i) => {
+                    if (i+1 == spl.length) {
+                        return;
+                    }
+                    fname += v + ' ';
+                });
+                console.log('userInfo: ', userInfo);
+                const firstname = (userInfo.given_name != undefined)? userInfo.given_name:fname;
+                const lastname = (userInfo.family_name != undefined)? userInfo.family_name:lname;
+                const reqBody = {
+                    email: userInfo.email,
+                    firstname,
+                    lastname
+                };
+                const logRes = await fetch("/.netlify/functions/users", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(reqBody)
+                });
+                if (logRes.ok) {
+                    sessionStorage.setItem("email", userInfo.email);
+                    navigate("/");
+                }
+                else {
+                    window.location.reload();
+                }
             }
             setToken(tokenResponse);
         },
         prompt: "consent",
-    });
-
-    const navigate = useNavigate();
-    useEffect(() => {
-        if (Object.keys(token).length === 0) {
-            return;
-        }
-        navigate("/");
     });
 
     return ( <>

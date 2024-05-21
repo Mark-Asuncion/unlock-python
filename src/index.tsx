@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider, } from "react-router-dom";
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import env from "react-dotenv";
+import Tutorial from './Module/Components/Tutorial';
 
 const router = createBrowserRouter([
     {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
     {
         path: "/login",
         element: <Login />
+    },
+    {
+        path: "/tutorial/:id",
+        element: <Tutorial />
     }
 ]);
 
@@ -28,7 +33,7 @@ root.render(
     <React.StrictMode>
         <GoogleOAuthProvider clientId={env.OAUTH_CLIENTID}>
             <RouterProvider router={router} />
-        </GoogleOAuthProvider>;
+        </GoogleOAuthProvider>
     </React.StrictMode>
 );
 
