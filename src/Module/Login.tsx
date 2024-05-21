@@ -42,6 +42,7 @@ export default function Login() {
                     body: JSON.stringify(reqBody)
                 });
                 if (logRes.ok) {
+                    console.log(userInfo);
                     sessionStorage.setItem("email", userInfo.email);
                     navigate("/");
                 }

@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider, } from "react-router-dom";
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import env from "react-dotenv";
-import Tutorial from './Module/Components/Tutorial';
+import Tutorial from './Module/Tutorial';
 
 const router = createBrowserRouter([
     {
