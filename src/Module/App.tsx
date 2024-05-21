@@ -32,7 +32,7 @@ function Root() {
     const navigate = useNavigate();
     useEffect(() => {
         checkSession(navigate, setSessionOk);
-    });
+    }, [navigate]);
 
     if (isSessionOk)
     return (

@@ -5,5 +5,6 @@ export interface TutorialContent {
 
 export interface ITutorial {
     title: string,
+    img: string,
     contents: TutorialContent[]
 }

@@ -1,18 +1,23 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ITutorial } from "../Utils/ITutorial";
 
 export default function Tutorials() {
     const [tutorials, setTutorials] = useState([]);
     const navigate = useNavigate();
+    const fetchData = useCallback(async()=> {
+        const r = await fetch("/tutorial.json")
+        if (!r.ok) {
+            return;
+        }
+        const j = await r.json();
+        setTutorials(j);
+    }, []);
+
     useEffect(() => {
-        fetch("/tutorial.json")
-            .then(async (r) => {
-                if (r.ok) {
-                    const j = await r.json();
-                    setTutorials(j);
-                }
-            });
+        if (tutorials.length === 0) {
+            fetchData();
+        }
     });
 
     function openTutorial(id: number) {
@@ -26,7 +31,7 @@ export default function Tutorials() {
                     return (
                         <div className="p-3 rounded-md shadow-sm shadow-gray-400" onClick={() => openTutorial(i)}>
                             <img className="w-[100%] h-32 bg-contain mb-6"
-                                src="https://cdn.britannica.com/28/239528-050-D89C8118/reticulated-python-Malayopython-reticulatus.jpg" alt="snake" />
+                                src={v.img} alt="snake" />
                             <h1 className="text-xl">{v.title}</h1>
                         </div>
                     )

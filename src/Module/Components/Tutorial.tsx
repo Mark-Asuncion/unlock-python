@@ -1,20 +1,24 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 export default function Tutorial() {
-    const [tutorials, setTutorials] = useState([]);
-
+    const [tutorial, setTutorial] = useState({});
     console.log(useParams());
 
-    // useEffect(() => {
-    //     fetch("/tutorial.json")
-    //         .then(async (r) => {
-    //             if (r.ok) {
-    //                 const j = await r.json();
-    //                 setTutorials(j);
-    //             }
-    //         });
-    // });
+    const fetchData = useCallback(async()=> {
+        const r = await fetch("/tutorial.json")
+        if (!r.ok) {
+            return;
+        }
+        const j = await r.json();
+        setTutorial(j);
+    }, []);
+
+    useEffect(() => {
+        if (Object.keys(tutorial).length === 0) {
+            fetchData();
+        }
+    });
 
     return (
         <>
