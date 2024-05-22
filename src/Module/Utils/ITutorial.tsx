@@ -1,5 +1,5 @@
 export interface TutorialContent {
-    tag: "h1" | "p" | "code",
+    type: "h1" | "p" | "code" | "table",
     content: string
 }
 

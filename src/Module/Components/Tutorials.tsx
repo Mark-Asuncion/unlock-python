@@ -29,10 +29,14 @@ export default function Tutorials() {
             {
                 tutorials.map((v: ITutorial, i) => {
                     return (
-                        <div className="p-3 rounded-md shadow-sm shadow-gray-400" onClick={() => openTutorial(i)}>
-                            <img className="w-[100%] h-32 bg-contain mb-6"
+                        <div className="rounded-md shadow-sm shadow-gray-400
+                            w-[max-content] h-[min-content]" onClick={() => openTutorial(i)}>
+                            <img className="w-64 h-44 bg-contain rounded-tl-md rounded-tr-md"
                                 src={v.img} alt="snake" />
-                            <h1 className="text-xl">{v.title}</h1>
+                            <div className="p-3">
+                                <h1 className="text-xl mb-0">{v.title}</h1>
+                                {/* <p className="text-sm mt-0">Not Read</p> */}
+                            </div>
                         </div>
                     )
                 })

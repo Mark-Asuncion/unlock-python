@@ -39,9 +39,9 @@ function Root() {
         <div className='w-[100%]'>
             <Header />
             <div className='p-2 w-[85%] m-auto mt-8'>
-                <h1 className='text-2xl font-bold'>Tutorials</h1>
-                <div className='flex flex-row flex-wrap gap-4
-                    justify-between my-4'>
+                <h1 className='text-3xl font-bold'>Tutorials</h1>
+                <div className='flex flex-row flex-wrap gap-4 my-4'>
+                    <div className='w-[100%] h-1 bg-accent rounded-full'/>
                     <Tutorials />
                 </div>
             </div>

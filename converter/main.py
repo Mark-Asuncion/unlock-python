@@ -14,7 +14,7 @@ def p(lines, start):
         line = lines[i]
         if line.endswith('"'):
             out += line.replace('"', '')
-            new_start = i+1
+            new_start = i
             break;
         else:
             out += line
@@ -23,10 +23,10 @@ def p(lines, start):
 
 def code(lines, start):
     out = ""
-    new_start = start + 1
+    new_start = start
     for i in range(start + 1,len(lines)):
         if lines[i] == "end_code":
-            new_start = i+1
+            new_start = i
             break;
         out += lines[i] + "\n"
     return (out, new_start)
@@ -36,7 +36,8 @@ def parse_text(text: str):
     global out
     lines = text.split("\n")
 
-    for i in range(len(lines)):
+    i = 0
+    while i < len(lines):
         line = lines[i]
         if line.startswith("#"):
             out.append({
@@ -57,6 +58,7 @@ def parse_text(text: str):
                 "content": o[0]
             })
             i = o[1]
+        i+=1
 
 #
 # input_text = """

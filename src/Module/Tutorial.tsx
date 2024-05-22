@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Header from "./Components/Header";
 import { ITutorial } from "./Utils/ITutorial";
+import { createTable } from "./Utils/Table";
 
 export default function Tutorial() {
     const [tutorial, setTutorial] = useState<ITutorial | {}>({});
@@ -27,8 +28,29 @@ export default function Tutorial() {
         return (
             <div>
                 <Header />
-                <div className="w-[65%] m-auto mt-6">
-                    <h1 className="text-2xl font-bold">{ t.title }</h1>
+                <div className="w-[65%] m-auto my-6">
+                    <h1 className="text-4xl font-bold my-7">{ t.title }</h1>
+                    {
+                        t.contents.map((v) => {
+                            let element;
+                            if (v.type === "h1") {
+                                element = <h1 className="text-3xl font-bold my-3">{ v.content }</h1>
+                            }
+                            else if(v.type === "code") {
+                                element = 
+                                    <div className="p-2 bg-black text-white rounded-md">
+                                        <code><pre>{ v.content }</pre></code>
+                                    </div>
+                            }
+                            else if (v.type === "table") {
+                                element = createTable(v.content);
+                            }
+                            else {
+                                element = <p className="my-2">{ v.content }</p>
+                            }
+                            return element;
+                        })
+                    }
                 </div>
             </div>
         )
@@ -36,6 +58,7 @@ export default function Tutorial() {
     return (
         <>
             <Header />
+            <h1 className="text-3xl">Loading...</h1>
         </>
     )
 }

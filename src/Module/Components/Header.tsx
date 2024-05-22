@@ -1,3 +1,5 @@
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import pythonLogo from '../../Assets/python-logo.png';
 
 function bet() {
@@ -10,12 +12,16 @@ function getName() {
 }
 
 export default function Header() {
+    const navigate = useNavigate();
     return (
         <div className='w-[100%] bg-accent text-white
             flex flex-row p-3'>
 
-            <div className='bg-white rounded-full m-1 p-2' onClick={() => bet() }>
+            <div className='bg-white rounded-full m-1 p-2' onClick={() => navigate("/") }>
                 <img src={pythonLogo} alt="logo" className='w-auto h-auto'/>
+            </div>
+            <div className='bg-white rounded-full m-1 p-2' onClick={() => bet() }>
+                <img src="/chac.jpeg" alt="logo" className='w-32 h-auto rounded-full'/>
             </div>
             <div className='my-auto ml-auto pr-4 text-lg font-bold'> <span>{ getName() }</span> </div>
         </div>
