@@ -1,0 +1,185 @@
+{
+    "title": "Python Data Types",
+    "questions": [
+        {
+            "type": "mult",
+            "q": [
+                {
+                    "type": "p",
+                    "content": "What will be the output of the following code?"
+                },
+                {
+                    "type": "code",
+                    "content": "x = 1.5\nprint(type(x))"
+                }
+            ],
+            "answer": "<class 'float'>",
+            "choices": [
+                "<class 'int'>",
+                "<class 'float'>",
+                "<class 'complex'>",
+                "<class 'str'>"
+            ]
+        },
+        {
+            "type": "mult",
+            "q": [
+                {
+                    "type": "p",
+                    "content": "How can you create a complex number in Python?"
+                },
+                {
+                    "type": "code",
+                    "content": "x = "
+                }
+            ],
+            "answer": "Both b and c",
+            "choices": [
+                "x = 1 + 2i",
+                "x = 1 + 2j",
+                "x = complex(1, 2)",
+                "Both b and c"
+            ]
+        },
+        {
+            "type": "",
+            "q": [],
+            "answer": ""
+        },
+        {
+            "type": "mult",
+            "q": [
+                {
+                    "type": "p",
+                    "content": "Which function can you use to convert a float to an integer?"
+                },
+                {
+                    "type": "code",
+                    "content": "x = 3.14\ny = ?"
+                }
+            ],
+            "answer": "y = int(x)",
+            "choices": [
+                "y = int(x)",
+                "y = float(x)",
+                "y = str(x)",
+                "y = complex(x)"
+            ]
+        },
+        {
+            "type": "mult",
+            "q": [
+                {
+                    "type": "p",
+                    "content": "What will be the output of the following code?"
+                },
+                {
+                    "type": "code",
+                    "content": "x = 1\ny = 2.8\nz = 1j\n\na = float(x)\nb = int(y)\nc = complex(x)\n\nprint(a, b, c)"
+                }
+            ],
+            "answer": "1.0 2 (1+0j)",
+            "choices": [
+                "1.0 2 (1+0j)",
+                "1.0 2 (1j)",
+                "1.0 2.8 (1+0j)",
+                "1 2 (1+0j)"
+            ]
+        },
+        {
+            "type": "mult",
+            "q": [
+                {
+                    "type": "p",
+                    "content": "What will be the output of the following code?"
+                },
+                {
+                    "type": "code",
+                    "content": "x = -35.59\nprint(type(x))"
+                }
+            ],
+            "answer": "<class 'float'>",
+            "choices": [
+                "<class 'int'>",
+                "<class 'float'>",
+                "<class 'complex'>",
+                "<class 'str'>"
+            ]
+        },
+        {
+            "type": "mult",
+            "q": [
+                {
+                    "type": "p",
+                    "content": "Which of the following is not a valid set operation?"
+                },
+                {
+                    "type": "code",
+                    "content": "x = {\"apple\", \"banana\", \"cherry\"}"
+                }
+            ],
+            "answer": "x[1] = \"orange\"",
+            "choices": [
+                "x.add(\"orange\")",
+                "x.update([\"orange\", \"mango\"])",
+                "x.remove(\"banana\")",
+                "x[1] = \"orange\""
+            ]
+        },
+        {
+            "type": "mult",
+            "q": [
+                {
+                    "type": "p",
+                    "content": "What will be the output of the following code?"
+                },
+                {
+                    "type": "code",
+                    "content": "x = True\nprint(type(x))"
+                }
+            ],
+            "answer": "<class 'bool'>",
+            "choices": [
+                "<class 'int'>",
+                "<class 'float'>",
+                "<class 'complex'>",
+                "<class 'bool'>"
+            ]
+        },
+        {
+            "type": "fill",
+            "q": [],
+            "answer": "tuple"
+        },
+        {
+            "type": "fill",
+            "q": [
+                {
+                    "type": "p",
+                    "content": "To check if a variable x is of type integer, you would use type(x) is ______. "
+                }
+            ],
+            "answer": "int"
+        },
+        {
+            "type": "fill",
+            "q": [
+                {
+                    "type": "p",
+                    "content": "The function to check the data type of any object is ______. "
+                }
+            ],
+            "answer": "type()"
+        },
+        {
+            "type": "fill",
+            "q": [
+                {
+                    "type": "p",
+                    "content": "To create a string in Python, you use the syntax x = \"Hello\". This variable x will be of type ______. "
+                }
+            ],
+            "answer": "str"
+        }
+    ]
+}

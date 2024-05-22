@@ -2,10 +2,12 @@ import { useEffect, useState } from 'react';
 import { NavigateFunction, redirect, useNavigate } from "react-router-dom";
 import Header from './Components/Header';
 import Tutorials from './Components/Tutorials';
+import { useAtom } from 'jotai';
+import { USER, UserInfo } from './Utils/UserSession';
 
 // @ts-ignore
-async function checkSession(navigate: NavigateFunction, setOk) {
-    const email = sessionStorage.getItem("email");
+async function checkSession(userInfo: UserInfo, setUserInfo: SetAtom<[SetStateAction<UserInfo>], void>,navigate: NavigateFunction, setOk) {
+    const email = userInfo.email;
     if (email == null) {
         navigate("/login");
     }
@@ -17,9 +19,8 @@ async function checkSession(navigate: NavigateFunction, setOk) {
     });
     if (resp.ok) {
         const jresp = await resp.json();
-        console.log(jresp);
-        sessionStorage.setItem("firstname", jresp.firstname);
-        sessionStorage.setItem("lastname" ,  jresp.lastname);
+        // console.log("jresp", jresp);
+        setUserInfo(jresp);
         setOk(true);
     }
     else {
@@ -28,10 +29,12 @@ async function checkSession(navigate: NavigateFunction, setOk) {
 }
 
 function Root() {
+    const [user, setUser] = useAtom(USER);
+    console.log("user", user);
     const [isSessionOk, setSessionOk] = useState(false);
     const navigate = useNavigate();
     useEffect(() => {
-        checkSession(navigate, setSessionOk);
+        checkSession(user, setUser, navigate, setSessionOk);
     }, [navigate]);
 
     if (isSessionOk)
@@ -39,7 +42,7 @@ function Root() {
         <div className='w-[100%]'>
             <Header />
             <div className='p-2 w-[85%] m-auto mt-8'>
-                <h1 className='text-3xl font-bold'>Tutorials</h1>
+                <h1 className='text-6xl font-bold'>Learn</h1>
                 <div className='flex flex-row flex-wrap gap-4 my-4'>
                     <div className='w-[100%] h-1 bg-accent rounded-full'/>
                     <Tutorials />

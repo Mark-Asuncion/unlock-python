@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useGoogleLogin } from '@react-oauth/google';
 import { useNavigate } from 'react-router-dom';
+import { useAtom } from 'jotai';
+import { USER } from './Utils/UserSession';
 
 export default function Login() {
-    const [token,setToken] = useState({});
+    const [_user, setUser] = useAtom(USER);
     const navigate = useNavigate();
 
     const login = useGoogleLogin({
@@ -26,7 +28,7 @@ export default function Login() {
                     }
                     fname += v + ' ';
                 });
-                console.log('userInfo: ', userInfo);
+                // console.log('userInfo: ', userInfo);
                 const firstname = (userInfo.given_name != undefined)? userInfo.given_name:fname;
                 const lastname = (userInfo.family_name != undefined)? userInfo.family_name:lname;
                 const reqBody = {
@@ -42,15 +44,13 @@ export default function Login() {
                     body: JSON.stringify(reqBody)
                 });
                 if (logRes.ok) {
-                    console.log(userInfo);
-                    sessionStorage.setItem("email", userInfo.email);
+                    setUser(reqBody);
                     navigate("/");
                 }
                 else {
                     window.location.reload();
                 }
             }
-            setToken(tokenResponse);
         },
         prompt: "consent",
     });
@@ -71,7 +71,6 @@ export default function Login() {
                         className='w-16 aspect-square' />
                 </button>
         </div>
-        <code> { JSON.stringify(token) } </code>
     </>
     )
 }

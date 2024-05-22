@@ -1,16 +1,36 @@
 import { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ITutorial } from "../Utils/ITutorial";
+import { USER, UserInfo } from "../Utils/UserSession";
+import { useAtom } from 'jotai';
+
+interface TutorialInfo extends ITutorial {
+    isRead: boolean
+}
+
+// async function readStatus(user: UserInfo,t: TutorialInfo) {
+//     const ts = btoa(JSON.stringify(t).substring(0,20));
+//     const status = await fetch(`/.netlify/functions/tutorial-status?tid=${ts}&uid=${user.id}`);
+//     if (status.ok) {
+//         const d = await status.json();
+//         return (d.isRead)? d.isRead:false;
+//     }
+//     return false;
+// }
 
 export default function Tutorials() {
-    const [tutorials, setTutorials] = useState([]);
+    // const [user] = useAtom(USER);
+    const [tutorials, setTutorials] = useState<TutorialInfo[]>([]);
     const navigate = useNavigate();
     const fetchData = useCallback(async()=> {
         const r = await fetch("/tutorial.json")
         if (!r.ok) {
             return;
         }
-        const j = await r.json();
+        const j = (await r.json()) as TutorialInfo[];
+        // j.forEach(async (v) => {
+        //     v.isRead = await readStatus(user, v);
+        // });
         setTutorials(j);
     }, []);
 

@@ -1,0 +1,258 @@
+{
+    "title": "Python Syntax",
+    "questions": [
+        {
+            "type": "mult",
+            "q": [
+                {
+                    "type": "p",
+                    "content": "How do you set the type of a variable in Python?"
+                },
+                {
+                    "type": "code",
+                    "content": "x ="
+                }
+            ],
+            "answer": "All of the above",
+            "choices": [
+                "str",
+                "int",
+                "float",
+                "All of the above"
+            ]
+        },
+        {
+            "type": "mult",
+            "q": [
+                {
+                    "type": "p",
+                    "content": "What is the correct way to declare a variable using Camel Case?"
+                }
+            ],
+            "answer": "myVariableName",
+            "choices": [
+                "Myvariablename",
+                "myVariableName",
+                "my_variable_name",
+                "MyVariableName"
+            ]
+        },
+        {
+            "type": "mult",
+            "q": [
+                {
+                    "type": "p",
+                    "content": "What is the correct way to declare a variable using Snake Case?"
+                }
+            ],
+            "answer": "my_variable_name",
+            "choices": [
+                "Myvariablename",
+                "myVariableName",
+                "my_variable_name",
+                "MyVariableName"
+            ]
+        },
+        {
+            "type": "mult",
+            "q": [
+                {
+                    "type": "p",
+                    "content": "Which of the following is a valid variable name in Python?"
+                }
+            ],
+            "answer": "my_var",
+            "choices": [
+                "my-var",
+                "2myvar",
+                "my_var",
+                "my var"
+            ]
+        },
+        {
+            "type": "mult",
+            "q": [
+                {
+                    "type": "p",
+                    "content": "What is the output of the following code?"
+                },
+                {
+                    "type": "code",
+                    "content": "x = 4\nx = \"Sally\"\nprint(x)"
+                }
+            ],
+            "answer": "Sally",
+            "choices": [
+                "4",
+                "Sally",
+                "4 Sally",
+                "Error"
+            ]
+        },
+        {
+            "type": "mult",
+            "q": [
+                {
+                    "type": "p",
+                    "content": "What will be the output of the following code?"
+                },
+                {
+                    "type": "code",
+                    "content": "x, y, z = \"Orange\", \"Banana\", \"Cherry\"\nprint(y)"
+                }
+            ],
+            "answer": "Banana",
+            "choices": [
+                "Orange",
+                "Banana",
+                "Cherry",
+                "Error"
+            ]
+        },
+        {
+            "type": "mult",
+            "q": [
+                {
+                    "type": "p",
+                    "content": "What will be the output of the following code?"
+                },
+                {
+                    "type": "code",
+                    "content": "#print(\"Hello world\")"
+                }
+            ],
+            "answer": "No answer/No output",
+            "choices": [
+                "Hello World",
+                "Hello world",
+                "Hello world",
+                "No answer/No output"
+            ]
+        },
+        {
+            "type": "fill",
+            "q": [
+                {
+                    "type": "p",
+                    "content": "To print the string \"Hello, World!\" in Python, you use the _____ function."
+                }
+            ],
+            "answer": "print"
+        },
+        {
+            "type": "fill",
+            "q": [
+                {
+                    "type": "p",
+                    "content": "Python uses _____ to indicate code blocks, unlike many other programming languages."
+                }
+            ],
+            "answer": "indentation"
+        },
+        {
+            "type": "fill",
+            "q": [
+                {
+                    "type": "p",
+                    "content": "In Python, a single-line comment starts with the _____ character."
+                }
+            ],
+            "answer": "# (hash/pound)"
+        },
+        {
+            "type": "fill",
+            "q": [
+                {
+                    "type": "p",
+                    "content": "In Python, a symbol/s to create a  multi-line comment  _____ ?"
+                }
+            ],
+            "answer": ["'''", "\"\"\""]
+        },
+        {
+            "type": "mult",
+            "q": [
+                {
+                    "type": "p",
+                    "content": "How can you make a variable inside a function global?"
+                },
+                {
+                    "type": "code",
+                    "content": "def myfunc():\n    ...\n    x = \"fantastic\""
+                }
+            ],
+            "answer": "Use the global keyword before the variable name",
+            "choices": [
+                "..",
+                "Use the global keyword before the variable name",
+                "Declare the variable outside the function",
+                "Use the global keyword after the variable name",
+                "None of the above"
+            ]
+        },
+        {
+            "type": "mult",
+            "q": [
+                {
+                    "type": "p",
+                    "content": "Which of the following will print the type of a variable y? "
+                }
+            ],
+            "answer": "print(type(y))",
+            "choices": [
+                "print(type y)",
+                "print(typeof(y))",
+                "print(type(y))",
+                "print(typeof y)"
+            ]
+        },
+        {
+            "type": "mult",
+            "q": [
+                {
+                    "type": "p",
+                    "content": "What will be the output of the following code?"
+                },
+                {
+                    "type": "code",
+                    "content": "x = \"awesome\"\ndef myfunc():\n    x = \"fantastic\"\n    print(\"Python is \" + x)\nmyfunc()\nprint(\"Python is \" + x)"
+                }
+            ],
+            "answer": "Python is fantastic\\nPython is awesome",
+            "choices": [
+                "Python is fantastic\\nPython is fantastic",
+                "Python is fantastic\\nPython is awesome",
+                "Python is awesome\\nPython is awesome",
+                "Error"
+            ]
+        },
+        {
+            "type": "fill",
+            "q": [
+                {
+                    "type": "p",
+                    "content": "Complete the code block, print \"OUM\" if 23 is larger than 10."
+                },
+                {
+                    "type": "code",
+                    "content": "if 5 > 2:\n    ____"
+                }
+            ],
+            "answer": "print(\"OUM\")"
+        },
+        {
+            "type": "fill",
+            "q": [
+                {
+                    "type": "p",
+                    "content": "Given the variable name = \"Alice\", complete the code to print \"My name is Alice\"."
+                },
+                {
+                    "type": "code",
+                    "content": "name = \"Alice\"\nprint(\"My name is\", ____)"
+                }
+            ],
+            "answer": "name"
+        }
+    ]
+}

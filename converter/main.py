@@ -31,7 +31,6 @@ def code(lines, start):
         out += lines[i] + "\n"
     return (out, new_start)
 
-
 def parse_text(text: str):
     global out
     lines = text.split("\n")
@@ -63,8 +62,7 @@ def parse_text(text: str):
 #
 # input_text = """
 # # Header 1
-# "This is a paragraph."
-# begin_code
+# "This is a paragraph." begin_code
 # def example():
 #     print("Hello, world!")
 # end_code

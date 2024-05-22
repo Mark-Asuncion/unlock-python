@@ -1,36 +1,14 @@
 import { Handler, HandlerEvent, HandlerResponse } from '@netlify/functions'
-import { initializeApp } from "firebase/app";
 import {
-    getFirestore,
     collection,
     getDocs,
     query,
     where,
     addDoc,
     QueryConstraint,
-    orderBy,
-    startAt,
-    endAt,
-    getDoc,
     updateDoc,
-    doc
 } from 'firebase/firestore/lite';
-
-const FIREBASE_CFG = {
-    apiKey: process.env.FIREBASE_APIKEY,
-    authDomain: process.env.FIREBASE_AUTHDOMAIN,
-    projectId: process.env.FIREBASE_PROJECTID,
-    storageBucket: process.env.FIREBASE_STORAGEBUCKET,
-    messagingSenderId: process.env.FIREBASE_MESSAGINGSENDERID,
-    appId: process.env.FIREBASE_APPID,
-    measurementId: process.env.FIREBASE_MEASUREMENTID,
-};
-
-function dbInit() {
-    const app = initializeApp(FIREBASE_CFG);
-    const db = getFirestore(app);
-    return db;
-}
+import { dbInit } from '../database';
 
 interface UserSchema {
     email: string,
@@ -69,7 +47,7 @@ async function GETHandler(event: HandlerEvent): Promise<HandlerResponse> {
     }
     const me = (param.me == "true")? true:false;
     const email = param.email;
-    if (email == null && me) {
+    if (email == null) {
         return {
             statusCode: 400,
             body: "Error: Empty Email"
@@ -78,33 +56,11 @@ async function GETHandler(event: HandlerEvent): Promise<HandlerResponse> {
     // const body = JSON.parse(event.body);
     const usersCollection = collection(db, 'users');
 
-    // if (param != "true") {
-    //     const queries: QueryConstraint[] = [];
-    //     if (body.startAt) {
-    //         queries.push( orderBy(body.startAt) );
-    //         queries.push( startAt(body[body.startAt]) );
-    //         queries.push( endAt(body[body.startAt] + '\uf8ff') );
-    //     }
-    //     else {
-    //         getExactQueryFrom(body).forEach((v) => {
-    //             queries.push(v);
-    //         });
-    //     }
-    //
-    //     const docs = ( await getDocs( query(usersCollection, ...queries) ) )
-    //                 .docs.map((v) => v.data());
-    //     return {
-    //         statusCode: 200,
-    //         headers: {
-    //             ["Content-Type"]: "application/json"
-    //         },
-    //         body: JSON.stringify(docs)
-    //     };
-    // }
-    // else {
     const docs = ( await getDocs( query(usersCollection, where("email", "==", email)) ) )
                 .docs[0];
-    const resBody = (docs == undefined)? "User Does not exists":JSON.stringify( docs.data() );
+    const data = docs.data();
+    console.log(docs.id);
+    const resBody = (docs == undefined)? "User Does not exists":JSON.stringify({ ...docs.data(), id: docs.id });
     return {
         statusCode: (docs == undefined)? 400:200,
         headers: {
