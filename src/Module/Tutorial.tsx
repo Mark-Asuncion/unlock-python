@@ -4,14 +4,44 @@ import Header from "./Components/Header";
 import TutorialSidebar from "./Components/TutorialSidebar";
 import { ITutorial } from "./Utils/ITutorial";
 import { createTable } from "./Utils/Table";
+import Oval from 'react-loading-icons/dist/esm/components/oval';
+
+function QuizButton({ available, title }: { available: string[], title: string }) {
+    const navigate = useNavigate();
+    // assumes title always starts with 'Python'
+    const t = title.substring(6).toLowerCase().trim();
+    console.log(available, t);
+    let id = -1
+    available.forEach((v, i) => {
+        if (v === t) {
+            id = i
+        }
+    });
+
+    if (id !== -1) {
+        const qdata = available[id].split(' ').join('');
+        return (
+            <div className="w-[100%] p-3 hover:bg-accent
+                text-accent hover:text-white shadow-sm shadow-gray-200
+                text-3xl font-bold"
+                onClick={() => navigate(`/quiz/${qdata}`)}>
+                <h1>QUIZ</h1>
+            </div>
+        )
+    }
+    return (
+        <>
+        </>
+    )
+}
 
 export default function Tutorial() {
     const [tutorial, setTutorial] = useState<ITutorial | {}>({});
-    const navigate = useNavigate();
+    const [availableQ, setAvailableQ] = useState<string[]>([]);
     const id = Number(useParams().id);
     const [ othersT, setOthersT ] = useState<[number, ITutorial][]>([]);
 
-    const fetchData = async ()=> {
+    const fetchData = useCallback(async ()=> {
         const r = await fetch("/tutorial.json")
         if (!r.ok) {
             return;
@@ -26,11 +56,21 @@ export default function Tutorial() {
             o.push([i, v]);
         });
         setOthersT(o);
-    };
+    }, []);
+
+    const fetchAvailQ = useCallback(async () => {
+        const r = await fetch("/questions/available.txt");
+        if (!r.ok) {
+            return;
+        }
+        const j = await r.text();
+        setAvailableQ(j.split("\n"));
+    }, []);
 
     useEffect(() => {
         if (Object.keys(tutorial).length === 0) {
             fetchData();
+            fetchAvailQ();
         }
     });
 
@@ -39,14 +79,15 @@ export default function Tutorial() {
         return (
             <div>
                 <Header />
-                <div className="grid grid-cols-[10%_1fr]">
-                    <div>
+                <div className="flex flex-row gap-10">
+                    <div className="h-[1fr] bg-gray-200">
                         <TutorialSidebar tutorials={othersT} rerender={() => {
                             setTutorial({});
                             setOthersT([]);
                         }}/>
+                        <QuizButton available={availableQ} title={t.title} />
                     </div>
-                    <div className="m-auto my-6 w-[80%]">
+                    <div className="m-auto my-6 w-[60%]">
                         <h1 className="text-4xl font-bold my-7">{ t.title }</h1>
                         <div className='w-[100%] h-1 bg-accent rounded-full'/>
                         {
@@ -78,7 +119,7 @@ export default function Tutorial() {
     return (
         <>
             <Header />
-            <h1 className="text-3xl">Loading...</h1>
+            <Oval stroke='black' width={256} height={256} className='m-auto mt-[15%]'/>
         </>
     )
 }

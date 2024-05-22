@@ -8,6 +8,7 @@ import { createBrowserRouter, redirect, RouterProvider, } from "react-router-dom
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import env from "react-dotenv";
 import Tutorial from './Module/Tutorial';
+import Quiz from './Module/Quiz';
 
 const router = createBrowserRouter([
     {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
     {
         path: "/tutorial/:id",
         element: <Tutorial />
+    },
+    {
+        path: "/quiz/:title",
+        element: <Quiz />
     },
 ]);
 

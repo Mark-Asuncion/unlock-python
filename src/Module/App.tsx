@@ -4,9 +4,10 @@ import Header from './Components/Header';
 import Tutorials from './Components/Tutorials';
 import { useAtom } from 'jotai';
 import { USER, UserInfo } from './Utils/UserSession';
+import Oval from 'react-loading-icons/dist/esm/components/oval';
 
 // @ts-ignore
-async function checkSession(userInfo: UserInfo, setUserInfo: SetAtom<[SetStateAction<UserInfo>], void>,navigate: NavigateFunction, setOk) {
+async function checkSession(userInfo: UserInfo, setUserInfo, navigate: NavigateFunction, setOk) {
     const email = userInfo.email;
     if (email == null) {
         navigate("/login");
@@ -52,7 +53,7 @@ function Root() {
     );
     else
     return (
-        <p>Loading</p>
+        <Oval stroke='black' width={256} height={256} className='m-auto mt-[15%]'/>
     )
 }
 
