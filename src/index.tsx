@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import './Styles/index.css';
 import Root from './Module/App';
 import Login from './Module/Login';
 import reportWebVitals from './reportWebVitals';
-import { createBrowserRouter, RouterProvider, } from "react-router-dom";
+import { createBrowserRouter, redirect, RouterProvider, } from "react-router-dom";
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import env from "react-dotenv";
 import Tutorial from './Module/Tutorial';
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     {
         path: "/tutorial/:id",
         element: <Tutorial />
-    }
+    },
 ]);
 
 const root = ReactDOM.createRoot(

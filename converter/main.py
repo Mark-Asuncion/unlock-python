@@ -8,7 +8,7 @@ f = sys.argv[1];
 out = [];
 
 def p(lines, start):
-    out = lines[start][1:]
+    out = ""
     new_start = start
     for i in range(start,len(lines)):
         line = lines[i]

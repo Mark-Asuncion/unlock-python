@@ -25,7 +25,7 @@
             },
             {
                 "type": "p",
-                "content": "Indentation refers to the spaces at the beginning of a code line.\"Indentation refers to the spaces at the beginning of a code line.\n\nWhere in other programming languages the indentation in code is for readability only, the indentation in Python is very important.\n\nPython uses indentation to indicate a block of code."
+                "content": "Indentation refers to the spaces at the beginning of a code line.\n\nWhere in other programming languages the indentation in code is for readability only, the indentation in Python is very important.\n\nPython uses indentation to indicate a block of code."
             },
             {
                 "type": "code",
@@ -41,7 +41,7 @@
             },
             {
                 "type": "p",
-                "content": "The number of spaces is up to you as a programmer, the most common use is four, but it has to be at least one.\"The number of spaces is up to you as a programmer, the most common use is four, but it has to be at least one."
+                "content": "The number of spaces is up to you as a programmer, the most common use is four, but it has to be at least one."
             },
             {
                 "type": "code",
@@ -49,7 +49,7 @@
             },
             {
                 "type": "p",
-                "content": "You have to use the same number of spaces in the same block of code, otherwise Python will give you an error:\"You have to use the same number of spaces in the same block of code, otherwise Python will give you an error:"
+                "content": "You have to use the same number of spaces in the same block of code, otherwise Python will give you an error:"
             },
             {
                 "type": "code",
@@ -61,7 +61,7 @@
             },
             {
                 "type": "p",
-                "content": "In Python, variables are created when you assign a value to it:\"In Python, variables are created when you assign a value to it:"
+                "content": "In Python, variables are created when you assign a value to it:"
             },
             {
                 "type": "code",
@@ -73,7 +73,7 @@
             },
             {
                 "type": "p",
-                "content": "Python has commenting capability for the purpose of in-code documentation.\"Python has commenting capability for the purpose of in-code documentation.\n\nComments start with a #, and Python will render the rest of the line as a comment:"
+                "content": "Python has commenting capability for the purpose of in-code documentation.\n\nComments start with a #, and Python will render the rest of the line as a comment:"
             },
             {
                 "type": "code",
@@ -95,7 +95,7 @@
             },
             {
                 "type": "p",
-                "content": "Variables are containers for storing data values.\"Variables are containers for storing data values."
+                "content": "Variables are containers for storing data values."
             },
             {
                 "type": "h1",
@@ -103,7 +103,7 @@
             },
             {
                 "type": "p",
-                "content": "Python has no command for declaring a variable.\"Python has no command for declaring a variable.\nA variable is created the moment you first assign a value to it."
+                "content": "Python has no command for declaring a variable.\nA variable is created the moment you first assign a value to it."
             },
             {
                 "type": "code",
@@ -111,7 +111,7 @@
             },
             {
                 "type": "p",
-                "content": "Variables do not need to be declared with any particular type, and can even change type after they have been set.\"Variables do not need to be declared with any particular type, and can even change type after they have been set."
+                "content": "Variables do not need to be declared with any particular type, and can even change type after they have been set."
             },
             {
                 "type": "code",
@@ -123,7 +123,7 @@
             },
             {
                 "type": "p",
-                "content": "If you want to specify the data type of a variable, this can be done with casting.\"If you want to specify the data type of a variable, this can be done with casting."
+                "content": "If you want to specify the data type of a variable, this can be done with casting."
             },
             {
                 "type": "code",
@@ -135,7 +135,7 @@
             },
             {
                 "type": "p",
-                "content": "You can get the data type of a variable with the type() function.\"You can get the data type of a variable with the type() function."
+                "content": "You can get the data type of a variable with the type() function."
             },
             {
                 "type": "code",
@@ -147,7 +147,7 @@
             },
             {
                 "type": "p",
-                "content": "Variable names are case-sensitive.\"Variable names are case-sensitive."
+                "content": "Variable names are case-sensitive."
             },
             {
                 "type": "code",
@@ -163,7 +163,7 @@
             },
             {
                 "type": "p",
-                "content": "A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume).\"A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume)."
+                "content": "A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume)."
             },
             {
                 "type": "code",
@@ -171,7 +171,7 @@
             },
             {
                 "type": "p",
-                "content": "Remember that variable names are case-sensitive.\"Remember that variable names are case-sensitive."
+                "content": "Remember that variable names are case-sensitive."
             },
             {
                 "type": "h1",
@@ -179,7 +179,7 @@
             },
             {
                 "type": "p",
-                "content": "Python allows you to assign values to multiple variables in one line:\"Python allows you to assign values to multiple variables in one line:"
+                "content": "Python allows you to assign values to multiple variables in one line:"
             },
             {
                 "type": "code",
@@ -187,7 +187,7 @@
             },
             {
                 "type": "p",
-                "content": "Make sure the number of variables matches the number of values, or else you will get an error.\"Make sure the number of variables matches the number of values, or else you will get an error."
+                "content": "Make sure the number of variables matches the number of values, or else you will get an error."
             },
             {
                 "type": "h1",
@@ -195,7 +195,7 @@
             },
             {
                 "type": "p",
-                "content": "Variable names with more than one word can be difficult to read.\"Variable names with more than one word can be difficult to read.\nThere are several techniques you can use to make them more readable:"
+                "content": "Variable names with more than one word can be difficult to read.\nThere are several techniques you can use to make them more readable:"
             },
             {
                 "type": "h1",
@@ -203,7 +203,7 @@
             },
             {
                 "type": "p",
-                "content": "Each word, except the first, starts with a capital letter.\"Each word, except the first, starts with a capital letter."
+                "content": "Each word, except the first, starts with a capital letter."
             },
             {
                 "type": "code",
@@ -215,7 +215,7 @@
             },
             {
                 "type": "p",
-                "content": "Each word starts with a capital letter:\"Each word starts with a capital letter:"
+                "content": "Each word starts with a capital letter:"
             },
             {
                 "type": "code",
@@ -227,7 +227,7 @@
             },
             {
                 "type": "p",
-                "content": "Each word is separated by an underscore character:\"Each word is separated by an underscore character:"
+                "content": "Each word is separated by an underscore character:"
             },
             {
                 "type": "code",
@@ -239,7 +239,7 @@
             },
             {
                 "type": "p",
-                "content": "Python allows you to assign values to multiple variables in one line:\"Python allows you to assign values to multiple variables in one line:"
+                "content": "Python allows you to assign values to multiple variables in one line:"
             },
             {
                 "type": "code",
@@ -247,7 +247,7 @@
             },
             {
                 "type": "p",
-                "content": "Make sure the number of variables matches the number of values, or else you will get an error.\"Make sure the number of variables matches the number of values, or else you will get an error."
+                "content": "Make sure the number of variables matches the number of values, or else you will get an error."
             },
             {
                 "type": "h1",
@@ -255,7 +255,7 @@
             },
             {
                 "type": "p",
-                "content": "And you can assign the same value to multiple variables in one line:\"And you can assign the same value to multiple variables in one line:"
+                "content": "And you can assign the same value to multiple variables in one line:"
             },
             {
                 "type": "code",
@@ -267,7 +267,7 @@
             },
             {
                 "type": "p",
-                "content": "If you have a collection of values in a list, tuple etc. Python allows you to extract the values into variables. This is called unpacking.\"If you have a collection of values in a list, tuple etc. Python allows you to extract the values into variables. This is called unpacking."
+                "content": "If you have a collection of values in a list, tuple etc. Python allows you to extract the values into variables. This is called unpacking."
             },
             {
                 "type": "code",
@@ -279,7 +279,7 @@
             },
             {
                 "type": "p",
-                "content": "The Python print() function is often used to output variables.\"The Python print() function is often used to output variables."
+                "content": "The Python print() function is often used to output variables."
             },
             {
                 "type": "code",
@@ -287,7 +287,7 @@
             },
             {
                 "type": "p",
-                "content": "In the print() function, you output multiple variables, separated by a comma:\"In the print() function, you output multiple variables, separated by a comma:"
+                "content": "In the print() function, you output multiple variables, separated by a comma:"
             },
             {
                 "type": "code",
@@ -295,7 +295,7 @@
             },
             {
                 "type": "p",
-                "content": "You can also use the + operator to output multiple variables:\"You can also use the + operator to output multiple variables:"
+                "content": "You can also use the + operator to output multiple variables:"
             },
             {
                 "type": "code",
@@ -303,11 +303,11 @@
             },
             {
                 "type": "p",
-                "content": "Notice the space character after \"Python \" and \"is \", without them the result would be \"Pythonisawesome\".\"Notice the space character after Python  and is , without them the result would be Pythonisawesome."
+                "content": "Notice the space character after \"Python \" and \"is \", without them the result would be \"Pythonisawesome\"."
             },
             {
                 "type": "p",
-                "content": "For numbers, the + character works as a mathematical operator:\"For numbers, the + character works as a mathematical operator:"
+                "content": "For numbers, the + character works as a mathematical operator:"
             },
             {
                 "type": "code",
@@ -315,7 +315,7 @@
             },
             {
                 "type": "p",
-                "content": "In the print() function, when you try to combine a string and a number with the + operator, Python will give you an error:\"In the print() function, when you try to combine a string and a number with the + operator, Python will give you an error:"
+                "content": "In the print() function, when you try to combine a string and a number with the + operator, Python will give you an error:"
             },
             {
                 "type": "code",
@@ -323,7 +323,7 @@
             },
             {
                 "type": "p",
-                "content": "The best way to output multiple variables in the print() function is to separate them with commas, which even support different data types:\"The best way to output multiple variables in the print() function is to separate them with commas, which even support different data types:"
+                "content": "The best way to output multiple variables in the print() function is to separate them with commas, which even support different data types:"
             },
             {
                 "type": "code",
@@ -335,11 +335,11 @@
             },
             {
                 "type": "p",
-                "content": "Variables that are created outside of a function (as in all of the examples above) are known as global variables.\"Variables that are created outside of a function (as in all of the examples above) are known as global variables."
+                "content": "Variables that are created outside of a function (as in all of the examples above) are known as global variables."
             },
             {
                 "type": "p",
-                "content": "Global variables can be used by everyone, both inside of functions and outside.\"Global variables can be used by everyone, both inside of functions and outside."
+                "content": "Global variables can be used by everyone, both inside of functions and outside."
             },
             {
                 "type": "code",
@@ -347,7 +347,7 @@
             },
             {
                 "type": "p",
-                "content": "If you create a variable with the same name inside a function, this variable will be local, and can only be used inside the function. The global variable with the same name will remain as it was, global and with the original value.\"If you create a variable with the same name inside a function, this variable will be local, and can only be used inside the function. The global variable with the same name will remain as it was, global and with the original value."
+                "content": "If you create a variable with the same name inside a function, this variable will be local, and can only be used inside the function. The global variable with the same name will remain as it was, global and with the original value."
             },
             {
                 "type": "code",
@@ -359,11 +359,11 @@
             },
             {
                 "type": "p",
-                "content": "Normally, when you create a variable inside a function, that variable is local, and can only be used inside that function.\"Normally, when you create a variable inside a function, that variable is local, and can only be used inside that function."
+                "content": "Normally, when you create a variable inside a function, that variable is local, and can only be used inside that function."
             },
             {
                 "type": "p",
-                "content": "To create a global variable inside a function, you can use the global keyword.\"To create a global variable inside a function, you can use the global keyword."
+                "content": "To create a global variable inside a function, you can use the global keyword."
             },
             {
                 "type": "code",
@@ -371,11 +371,11 @@
             },
             {
                 "type": "p",
-                "content": "Also, use the global keyword if you want to change a global variable inside a function.\"Also, use the global keyword if you want to change a global variable inside a function."
+                "content": "Also, use the global keyword if you want to change a global variable inside a function."
             },
             {
                 "type": "p",
-                "content": "To change the value of a global variable inside a function, refer to the variable by using the global keyword:\"To change the value of a global variable inside a function, refer to the variable by using the global keyword:"
+                "content": "To change the value of a global variable inside a function, refer to the variable by using the global keyword:"
             },
             {
                 "type": "code",
@@ -397,11 +397,11 @@
             },
             {
                 "type": "p",
-                "content": "In programming, data type is an important concept.\"In programming, data type is an important concept.\nVariables can store data of different types, and different types can do different things."
+                "content": "In programming, data type is an important concept.\nVariables can store data of different types, and different types can do different things."
             },
             {
                 "type": "p",
-                "content": "Python has the following data types built-in by default, in these categories:\"Python has the following data types built-in by default, in these categories:"
+                "content": "Python has the following data types built-in by default, in these categories:"
             },
             {
                 "type": "table",
@@ -413,7 +413,7 @@
             },
             {
                 "type": "p",
-                "content": "You can get the data type of any object by using the type() function:\"You can get the data type of any object by using the type() function:"
+                "content": "You can get the data type of any object by using the type() function:"
             },
             {
                 "type": "code",
@@ -425,7 +425,7 @@
             },
             {
                 "type": "p",
-                "content": "In Python, the data type is set when you assign a value to a variable:\"In Python, the data type is set when you assign a value to a variable:"
+                "content": "In Python, the data type is set when you assign a value to a variable:"
             },
             {
                 "type": "code",
@@ -449,7 +449,7 @@
             },
             {
                 "type": "p",
-                "content": "There are three numeric types in Python:\"There are three numeric types in Python:\nint\nfloat\ncomplex\nVariables of numeric types are created when you assign a value to them:"
+                "content": "There are three numeric types in Python:\nint\nfloat\ncomplex\nVariables of numeric types are created when you assign a value to them:"
             },
             {
                 "type": "code",
@@ -457,7 +457,7 @@
             },
             {
                 "type": "p",
-                "content": "To verify the type of any object in Python, use the type() function:\"To verify the type of any object in Python, use the type() function:"
+                "content": "To verify the type of any object in Python, use the type() function:"
             },
             {
                 "type": "code",
@@ -469,7 +469,7 @@
             },
             {
                 "type": "p",
-                "content": "Int, or integer, is a whole number, positive or negative, without decimals, of unlimited length.\"Int, or integer, is a whole number, positive or negative, without decimals, of unlimited length."
+                "content": "Int, or integer, is a whole number, positive or negative, without decimals, of unlimited length."
             },
             {
                 "type": "code",
@@ -481,7 +481,7 @@
             },
             {
                 "type": "p",
-                "content": "Float, or \"floating point number\" is a number, positive or negative, containing one or more decimals.\"Float, or floating point number is a number, positive or negative, containing one or more decimals."
+                "content": "Float, or \"floating point number\" is a number, positive or negative, containing one or more decimals."
             },
             {
                 "type": "code",
@@ -489,7 +489,7 @@
             },
             {
                 "type": "p",
-                "content": "Float can also be scientific numbers with an \"e\" to indicate the power of 10.\"Float can also be scientific numbers with an e to indicate the power of 10."
+                "content": "Float can also be scientific numbers with an \"e\" to indicate the power of 10."
             },
             {
                 "type": "code",
@@ -501,7 +501,7 @@
             },
             {
                 "type": "p",
-                "content": "Complex numbers are written with a \"j\" as the imaginary part:\"Complex numbers are written with a j as the imaginary part:"
+                "content": "Complex numbers are written with a \"j\" as the imaginary part:"
             },
             {
                 "type": "code",
@@ -513,7 +513,7 @@
             },
             {
                 "type": "p",
-                "content": "You can convert from one type to another with the int(), float(), and complex() methods:\"You can convert from one type to another with the int(), float(), and complex() methods:"
+                "content": "You can convert from one type to another with the int(), float(), and complex() methods:"
             },
             {
                 "type": "code",
@@ -521,7 +521,7 @@
             },
             {
                 "type": "p",
-                "content": "You cannot convert complex numbers into another number type.\"You cannot convert complex numbers into another number type."
+                "content": "You cannot convert complex numbers into another number type."
             }
         ]
 
@@ -536,7 +536,7 @@
             },
             {
                 "type": "p",
-                "content": "Strings in python are surrounded by either single quotation marks, or double quotation marks.\"Strings in python are surrounded by either single quotation marks, or double quotation marks.\n'hello' is the same as \"hello\".\nYou can display a string literal with the print() function:"
+                "content": "Strings in python are surrounded by either single quotation marks, or double quotation marks."
             },
             {
                 "type": "code",
@@ -548,7 +548,7 @@
             },
             {
                 "type": "p",
-                "content": "You can use quotes inside a string, as long as they don't match the quotes surrounding the string:\"You can use quotes inside a string, as long as they don't match the quotes surrounding the string:"
+                "content": "You can use quotes inside a string, as long as they don't match the quotes surrounding the string:"
             },
             {
                 "type": "code",
@@ -560,7 +560,7 @@
             },
             {
                 "type": "p",
-                "content": "Assigning a string to a variable is done with the variable name followed by an equal sign and the string:\"Assigning a string to a variable is done with the variable name followed by an equal sign and the string:"
+                "content": "Assigning a string to a variable is done with the variable name followed by an equal sign and the string:"
             },
             {
                 "type": "code",
@@ -572,7 +572,7 @@
             },
             {
                 "type": "p",
-                "content": "You can assign a multiline string to a variable by using three quotes:\"You can assign a multiline string to a variable by using three quotes:"
+                "content": "You can assign a multiline string to a variable by using three quotes:"
             },
             {
                 "type": "code",
@@ -584,11 +584,11 @@
             },
             {
                 "type": "p",
-                "content": "Like many other popular programming languages, strings in Python are arrays of bytes representing unicode characters.\"Like many other popular programming languages, strings in Python are arrays of bytes representing unicode characters.\nHowever, Python does not have a character data type, a single character is simply a string with a length of 1."
+                "content": "Like many other popular programming languages, strings in Python are arrays of bytes representing unicode characters."
             },
             {
                 "type": "p",
-                "content": "Square brackets can be used to access elements of the string.\"Square brackets can be used to access elements of the string."
+                "content": "Square brackets can be used to access elements of the string."
             },
             {
                 "type": "code",
@@ -600,7 +600,7 @@
             },
             {
                 "type": "p",
-                "content": "Since strings are arrays, we can loop through the characters in a string, with a for loop.\"Since strings are arrays, we can loop through the characters in a string, with a for loop."
+                "content": "Since strings are arrays, we can loop through the characters in a string, with a for loop."
             },
             {
                 "type": "code",
@@ -612,7 +612,7 @@
             },
             {
                 "type": "p",
-                "content": "To get the length of a string, use the len() function.\"To get the length of a string, use the len() function."
+                "content": "To get the length of a string, use the len() function."
             },
             {
                 "type": "code",
@@ -624,7 +624,7 @@
             },
             {
                 "type": "p",
-                "content": "To check if a certain phrase or character is present in a string, we can use the keyword in.\"To check if a certain phrase or character is present in a string, we can use the keyword in."
+                "content": "To check if a certain phrase or character is present in a string, we can use the keyword in."
             },
             {
                 "type": "code",
@@ -632,7 +632,7 @@
             },
             {
                 "type": "p",
-                "content": "Use it in an if statement:\"Use it in an if statement:"
+                "content": "Use it in an if statement:"
             },
             {
                 "type": "code",
@@ -644,7 +644,7 @@
             },
             {
                 "type": "p",
-                "content": "To check if a certain phrase or character is NOT present in a string, we can use the keyword not in.\"To check if a certain phrase or character is NOT present in a string, we can use the keyword not in."
+                "content": "To check if a certain phrase or character is NOT present in a string, we can use the keyword not in."
             },
             {
                 "type": "code",
@@ -652,7 +652,7 @@
             },
             {
                 "type": "p",
-                "content": "Use it in an if statement:\"Use it in an if statement:"
+                "content": "Use it in an if statement:"
             },
             {
                 "type": "code",
@@ -664,12 +664,201 @@
             },
             {
                 "type": "p",
-                "content": "You can return a range of characters by using the slice syntax.\"You can return a range of characters by using the slice syntax.\nSpecify the start index and the end index, separated by a colon, to return a part of the string."
+                "content": "You can return a range of characters by using the slice syntax."
             },
             {
                 "type": "code",
                 "content": "b = \"Hello, World!\"\nprint(b[2:5])\n"
+            },
+            {
+                "type": "h1",
+                "content": "Slice From the Start"
+            },
+            {
+                "type": "p",
+                "content": "By leaving out the start index, the range will start at the first character:"
+            },
+            {
+                "type": "code",
+                "content": "b = \"Hello, World!\"\nprint(b[:5])\n"
+            },
+            {
+                "type": "h1",
+                "content": "Slice To the End"
+            },
+            {
+                "type": "p",
+                "content": "By leaving out the end index, the range will go to the end:"
+            },
+            {
+                "type": "code",
+                "content": "b = \"Hello, World!\"\nprint(b[2:])\n"
+            },
+            {
+                "type": "h1",
+                "content": "Negative Indexing"
+            },
+            {
+                "type": "p",
+                "content": "Use negative indexes to start the slice from the end of the string:"
+            },
+            {
+                "type": "code",
+                "content": "b = \"Hello, World!\"\nprint(b[-5:-2])\n"
+            },
+            {
+                "type": "h1",
+                "content": "Upper Case"
+            },
+            {
+                "type": "p",
+                "content": "The upper() method returns the string in upper case:"
+            },
+            {
+                "type": "code",
+                "content": "a = \"Hello, World!\"\nprint(a.upper())\n"
+            },
+            {
+                "type": "h1",
+                "content": "Lower Case"
+            },
+            {
+                "type": "p",
+                "content": "The lower() method returns the string in lower case:"
+            },
+            {
+                "type": "code",
+                "content": "a = \"Hello, World!\"\nprint(a.lower())\n"
+            },
+            {
+                "type": "h1",
+                "content": "String Concatenation"
+            },
+            {
+                "type": "p",
+                "content": "To concatenate, or combine, two strings you can use the + operator."
+            },
+            {
+                "type": "code",
+                "content": "a = \"Hello\"\nb = \"World\"\nc = a + b\nprint(c)\n"
+            },
+            {
+                "type": "p",
+                "content": "To add a space between them, add a \" \""
+            },
+            {
+                "type": "code",
+                "content": "a = \"Hello\"\nb = \"World\"\nc = a + \" \" + b\nprint(c)\n"
+            },
+            {
+                "type": "h1",
+                "content": "String Format"
+            },
+            {
+                "type": "p",
+                "content": "As we learned in the Python Variables chapter, we cannot combine strings and numbers like this:"
+            },
+            {
+                "type": "code",
+                "content": "age = 36\ntxt = \"My name is John, I am \" + age\nprint(txt)\n"
+            },
+            {
+                "type": "h1",
+                "content": "F-Strings"
+            },
+            {
+                "type": "p",
+                "content": "F-String was introduced in Python 3.6, and is now the preferred way of formatting strings."
+            },
+            {
+                "type": "p",
+                "content": "To specify a string as an f-string, simply put an f in front of the string literal, and add curly brackets {} as placeholders for variables and other operations."
+            },
+            {
+                "type": "code",
+                "content": "age = 36\ntxt = f\"My name is John, I am {age}\"\nprint(txt)\n"
+            },
+            {
+                "type": "p",
+                "content": "A placeholder can include a modifier to format the value."
+            },
+            {
+                "type": "code",
+                "content": "price = 59\ntxt = f\"The price is {price:.2f} dollars\"\nprint(txt)\n"
+            },
+            {
+                "type": "p",
+                "content": "A placeholder can contain Python code, like math operations:"
+            },
+            {
+                "type": "code",
+                "content": "txt = f\"The price is {20 * 59} dollars\"\nprint(txt)\n"
             }
         ]
+    },
+    {
+        "title": "Python Booleans",
+        "img": "chac.jpeg",
+        "contents": [
+            {
+                "type": "h1",
+                "content": "Boolean Values"
+            },
+            {
+                "type": "p",
+                "content": "In programming you often need to know if an expression is True or False."
+            },
+            {
+                "type": "code",
+                "content": "print(10 > 9)\nprint(10 == 9)\nprint(10 < 9)\n"
+            },
+            {
+                "type": "p",
+                "content": "When you run a condition in an if statement, Python returns True or False:"
+            },
+            {
+                "type": "code",
+                "content": "a = 200\nb = 33\n\nif b > a:\n  print(\"b is greater than a\")\nelse:\n  print(\"b is not greater than a\")\n"
+            },
+            {
+                "type": "h1",
+                "content": "Evaluate Values and Variables"
+            },
+            {
+                "type": "p",
+                "content": "The bool() function allows you to evaluate any value, and give you True or False in return."
+            },
+            {
+                "type": "code",
+                "content": "print(bool(\"Hello\"))\nprint(bool(15))\n"
+            }
+        ]
+    },
+    {
+        "title": "Python Operator",
+        "img": "chac.jpeg",
+        "contents": [
+            {
+                "type": "h1",
+                "content": "Python Operators"
+            },
+            {
+                "type": "p",
+                "content": "Operators are used to perform operations on variables and values."
+            },
+            {
+                "type": "h1",
+                "content": "Python Arithmetic Operators"
+            },
+            {
+                "type": "p",
+                "content": "Arithmetic operators are used with numeric values to perform common mathematical operations:"
+            },
+            {
+                "type": "table",
+                "content": "+\tAddition\tx + y\n-\tSubtraction\tx - y\n*\tMultiplication\tx * y\n/\tDivision\tx / y\n%\tModulus\tx % y\n**\tExponentiation\tx ** y\n//\tFloor division\tx // y"
+            }
+        ]
+
     }
 ]
