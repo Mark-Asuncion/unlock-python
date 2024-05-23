@@ -58,7 +58,7 @@ export function Fill({ question, setAnswer, showAns }: { question: Question, set
             }
             <div className='w-auto m-auto mt-12'>
                 {
-                    (showAns)? <input type="text"
+                    (!showAns)? <input type="text"
                         className='rounded-md ring-1 ring-accent w-[100%] p-2'
                         onKeyDown={(e) => {
                             if (e.key == "Enter") {

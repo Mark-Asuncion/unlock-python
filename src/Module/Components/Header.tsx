@@ -23,8 +23,8 @@ export default function Header() {
             <div className='bg-white rounded-full m-1 p-2' onClick={() => navigate("/") }>
                 <img src={pythonLogo} alt="logo" className='w-auto h-auto'/>
             </div>
-            <div className='bg-white rounded-full m-1 p-2' onClick={() => bet() }>
-                <img src="/chac.jpeg" alt="logo" className='w-32 h-auto rounded-full'/>
+            <div className='rounded-full m-1 p-2 w-32 h-auto' onClick={() => bet() }>
+                {/* <img src="/chac.jpeg" alt="logo" className='w-32 h-auto rounded-full'/> */}
             </div>
             <div className='my-auto ml-auto pr-4 text-lg font-bold'> <span>{ user.firstname + ' ' + user.lastname }</span> </div>
         </div>

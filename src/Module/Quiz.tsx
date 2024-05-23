@@ -52,7 +52,7 @@ function getPoints(answers: string[], questionnaire: IQuestionnare | {}) {
 export default function Quiz() {
     const [questionnaire, setQuestionnaire] = useState<IQuestionnare | {}>({});
     const [answers, setAnswers] = useState<string[]>([]);
-    const [qnum, setQNum] = useState(1);
+    const [qnum, setQNum] = useState(0);
     const [showAns, setShowAns] = useState(false);
     const title = useParams().title;
 

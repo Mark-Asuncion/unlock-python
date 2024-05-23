@@ -42,11 +42,6 @@
             ]
         },
         {
-            "type": "",
-            "q": [],
-            "answer": ""
-        },
-        {
             "type": "mult",
             "q": [
                 {
@@ -145,11 +140,6 @@
                 "<class 'complex'>",
                 "<class 'bool'>"
             ]
-        },
-        {
-            "type": "fill",
-            "q": [],
-            "answer": "tuple"
         },
         {
             "type": "fill",
