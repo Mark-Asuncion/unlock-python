@@ -157,7 +157,7 @@
                     "content": "In Python, a single-line comment starts with the _____ character."
                 }
             ],
-            "answer": "# (hash/pound)"
+            "answer": "#"
         },
         {
             "type": "fill",
@@ -231,7 +231,7 @@
             "q": [
                 {
                     "type": "p",
-                    "content": "Complete the code block, print \"OUM\" if 23 is larger than 10."
+                    "content": "Complete the code block, print \"OUM\""
                 },
                 {
                     "type": "code",

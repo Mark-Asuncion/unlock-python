@@ -35,14 +35,17 @@ function CreateQ(showAns: boolean, question: Question, setAnswer: any) {
     return ( <></> )
 }
 
-function getPoints(answers: string[], questionnaire: IQuestionnare | {}) {
-    if ( Object.keys(questionnaire).length === 0 ) {
-        return 0;
-    }
-    const q = questionnaire as IQuestionnare;
+function getPoints(answers: string[], questionnaire: IQuestionnare) {
     let score = 0;
-    q.questions.forEach((v, i) => {
-        if (v.answer === answers[i]) {
+    questionnaire.questions.forEach((v, i) => {
+        if (typeof(v.answer) === "object") {
+            v.answer.forEach((vv) => {
+                if ( vv === answers[i] ) {
+                    score++;
+                }
+            })
+        }
+        else if (v.answer === answers[i]) {
             score++;
         }
     });
@@ -82,6 +85,17 @@ export default function Quiz() {
 
     if (Object.keys(questionnaire).length !== 0) {
         const q = questionnaire as IQuestionnare;
+        if (q.questions.length === qnum + 1) {
+            const pts = getPoints(answers, q);
+            return (
+                <div className='text-center'>
+                {
+                    (pts < (q.questions.length /2))? <p className='text-rose-500 text-3xl'>Ang baba mo mag 1xbet ka na lang</p>:
+                            <p className='text-accent text-3xl'>Python master ka na</p>
+                }
+                </div>
+            )
+        }
         return (
             <div>
                 <Header />
@@ -91,7 +105,7 @@ export default function Quiz() {
                 </div>
 
                 <div className='m-auto w-max'>
-                    <span className='text-xl text-accent text-center'>Score: { getPoints(answers, questionnaire) }</span>
+                    <span className='text-xl text-accent text-center'>Score: { getPoints(answers, q) }</span>
                 </div>
                 
                 <div className='m-auto w-max'>
