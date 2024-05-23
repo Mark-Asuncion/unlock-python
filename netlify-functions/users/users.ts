@@ -47,7 +47,7 @@ async function GETHandler(event: HandlerEvent): Promise<HandlerResponse> {
     }
     const me = (param.me == "true")? true:false;
     const email = param.email;
-    if (email == null) {
+    if (email == null || email.length === 0) {
         return {
             statusCode: 400,
             body: "Error: Empty Email"

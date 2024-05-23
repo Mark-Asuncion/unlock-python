@@ -49,7 +49,7 @@ export default function Tutorials() {
             {
                 tutorials.map((v: ITutorial, i) => {
                     return (
-                        <div className="rounded-md shadow-sm shadow-gray-400
+                        <div key={i} className="rounded-md shadow-sm shadow-gray-400
                             w-[max-content] h-[min-content]" onClick={() => openTutorial(i)}>
                             <img className="w-64 h-44 bg-contain rounded-tl-md rounded-tr-md"
                                 src={v.img} alt="snake" />

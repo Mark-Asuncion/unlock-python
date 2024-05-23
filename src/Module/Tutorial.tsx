@@ -9,8 +9,13 @@ import Oval from 'react-loading-icons/dist/esm/components/oval';
 function QuizButton({ available, title }: { available: string[], title: string }) {
     const navigate = useNavigate();
     // assumes title always starts with 'Python'
+    if (title == "") {
+        return (
+            <>
+            </>
+        )
+    }
     const t = title.substring(6).toLowerCase().trim();
-    console.log(available, t);
     let id = -1
     available.forEach((v, i) => {
         if (v === t) {
@@ -39,15 +44,18 @@ export default function Tutorial() {
     const [tutorial, setTutorial] = useState<ITutorial | {}>({});
     const [availableQ, setAvailableQ] = useState<string[]>([]);
     const id = Number(useParams().id);
-    const [ othersT, setOthersT ] = useState<[number, ITutorial][]>([]);
+    const [othersT, setOthersT] = useState<[number, ITutorial][]>([]);
+    // const tid = Number(useParams().id);
+    // if (id === -1) {
+    //     setId(tid);
+    // }
 
-    const fetchData = useCallback(async ()=> {
+    const fetchData = async ()=> {
         const r = await fetch("/tutorial.json")
         if (!r.ok) {
             return;
         }
         const j: ITutorial[] = await r.json();
-        setTutorial(j[id]);
         let o: [number, ITutorial][] = [];
         j.forEach((v, i) => {
             if (i == id) {
@@ -55,8 +63,9 @@ export default function Tutorial() {
             }
             o.push([i, v]);
         });
+        setTutorial(j[id]);
         setOthersT(o);
-    }, []);
+    };
 
     const fetchAvailQ = useCallback(async () => {
         const r = await fetch("/questions/available.txt");
@@ -68,22 +77,23 @@ export default function Tutorial() {
     }, []);
 
     useEffect(() => {
-        if (Object.keys(tutorial).length === 0) {
+        if (tutorial == undefined || Object.keys(tutorial).length === 0) {
+            console.log('2eff');
             fetchData();
             fetchAvailQ();
         }
     });
 
-    if (Object.keys(tutorial).length !== 0) {
+    if (tutorial != undefined && Object.keys(tutorial).length !== 0) {
         const t = tutorial as ITutorial;
         return (
             <div>
                 <Header />
                 <div className="flex flex-row gap-10">
                     <div className="h-[1fr] bg-gray-200">
-                        <TutorialSidebar tutorials={othersT} rerender={() => {
-                            setTutorial({});
-                            setOthersT([]);
+                        <TutorialSidebar tutorials={othersT} rerender={(id: number) => {
+                            setTutorial(_ => {});
+                            setOthersT(_ => []);
                         }}/>
                         <QuizButton available={availableQ} title={t.title} />
                     </div>
@@ -91,14 +101,14 @@ export default function Tutorial() {
                         <h1 className="text-4xl font-bold my-7">{ t.title }</h1>
                         <div className='w-[100%] h-1 bg-accent rounded-full'/>
                         {
-                            t.contents.map((v) => {
+                            t.contents.map((v, i) => {
                                 let element;
                                 if (v.type === "h1") {
-                                    element = <h1 className="text-3xl font-bold my-3">{ v.content }</h1>
+                                    element = <h1 key={i} className="text-3xl font-bold my-3">{ v.content }</h1>
                                 }
                                 else if(v.type === "code") {
                                     element = 
-                                        <div className="p-2 bg-black text-white rounded-md">
+                                        <div key ={i} className="p-2 bg-black text-white rounded-md">
                                             <code><pre>{ v.content }</pre></code>
                                         </div>
                                 }
@@ -106,7 +116,7 @@ export default function Tutorial() {
                                     element = createTable(v.content);
                                 }
                                 else {
-                                    element = <p className="my-2">{ v.content }</p>
+                                    element = <p key={i} className="my-2">{ v.content }</p>
                                 }
                                 return element;
                             })
